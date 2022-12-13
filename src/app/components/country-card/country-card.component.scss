@@ -1,0 +1,28 @@
+.root-card{
+	transition: scale 0.4s ;
+	width: 150px;
+	text-align: center;
+	// flex-direction: column;
+	&:hover{
+		scale: 1.2;
+		
+	}
+}
+
+.card{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	
+
+	
+
+
+	img{
+		
+		width: inherit;
+		height: 100%;
+		object-fit: cover;
+	}
+}
