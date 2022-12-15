@@ -1,0 +1,76 @@
+.country{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2%;
+	margin: 0 25px;
+	
+
+	.country_center{
+		margin: 0 auto;
+		width: 18%;
+		display: flex;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.country-filters{
+	margin: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	@media (min-width: 376px){
+	
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	app-dropdown{
+		width: 60%;
+		@media (min-width: 376px){
+			width: 25%;
+		}
+	}
+}
+
+.search-filter{
+	font-size: 1rem;
+	padding: 1rem;
+	border-radius: 0.25rem;
+	
+	span{
+		padding-right: 0.5rem;
+		
+	}
+	input{
+		font-size: 1rem;
+		border: none;
+		background-color: inherit;
+		color: #18C5D6;
+	}
+
+	:host-context(.light) .search-filter{
+		background-color: var(--l-element);
+		color: var(--l-input);
+		input::placeholder{
+			color: var(--l-text);
+		}
+		span{
+			color: black;
+		}
+	}
+
+	:host-context(.dark) .search-filter{
+		background-color: var(--d-lement);
+		color: var(--d-input);
+		input::placeholder{
+			color: rgb(143, 218, 236);
+		}
+	}
+}

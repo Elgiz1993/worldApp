@@ -1,6 +1,6 @@
-<!-- <div class="country-filters">
+<div class="country-filters">
 	<div class="search-filter">
-		<span><ion-icon name="search-outline"></ion-icon></span>
+		<!-- <span><ion-icon name="search-outline"></ion-icon></span> -->
 		<input type="text" placeholder="Search for a country..." [(ngModel)]='searchFilter'>
 	</div>
 	<app-dropdown 
@@ -8,7 +8,7 @@
 	[options]="regionOptions"
 	[(value)]="regionFilter"
 	></app-dropdown>
-</div> -->
+</div>
 
 <div class="country">
 	<app-country-card *ngFor="let country of countriesFilter" [country]="country" class="country_center" ></app-country-card>

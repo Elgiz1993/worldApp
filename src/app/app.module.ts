@@ -5,6 +5,7 @@ import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire/compat'
 
+
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HotToastModule } from '@ngneat/hot-toast';
@@ -26,6 +27,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountryComponent } from './components/country/country.component';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { DegreePipe } from './pipe/degree.pipe';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { UrlPipePipe } from './pipe/url-pipe.pipe';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 
 
@@ -40,6 +46,11 @@ import { DetailComponent } from './components/detail/detail.component';
     CountryComponent,
     CountryCardComponent,
     DetailComponent,
+    WeatherComponent,
+    DegreePipe,
+    DropdownComponent,
+    UrlPipePipe,
+    ErrorPageComponent,
 
 
   ],

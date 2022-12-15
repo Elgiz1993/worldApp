@@ -1,7 +1,8 @@
-<mat-toolbar color="primary" style="position: fixed; z-index: 1;">
+<mat-toolbar color="primary" class="navigation">
 	Welcome to my World
-
-	<button mat-button [routerLink]="['/' + 'country']">Country</button>
+	
+	<button mat-button routerLinkActive="active" [routerLink]="['/' + 'country']">Country</button>
+	<button mat-button routerLinkActive="active" [routerLink]="'/' + 'weather'">Weather</button>
 
 	<ng-container *ngIf="authService.currentUser$ | async as user;else loginButton">
 		<button mat-button [matMenuTriggerFor]="userMenu">
