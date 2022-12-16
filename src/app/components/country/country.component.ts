@@ -13,7 +13,6 @@ const REGION_OPTIONS = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
 export class CountryComponent implements OnInit {
 
   source!: ICountry[]
-  // countries$!: Observable<ICountry[]>
   searchFilter?: string
   regionFilter?: string
   regionOptions = REGION_OPTIONS;

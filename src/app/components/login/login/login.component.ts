@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { HotToastService } from '@ngneat/hot-toast'
-import { Observable } from 'rxjs';
 
 
 @Component({

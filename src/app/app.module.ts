@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireModule } from '@angular/fire/compat';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { DegreePipe } from './pipe/degree.pipe';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { UrlPipePipe } from './pipe/url-pipe.pipe';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { MapComponent } from './components/map/map.component';
 
 
 
@@ -51,6 +53,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     DropdownComponent,
     UrlPipePipe,
     ErrorPageComponent,
+    MapComponent,
 
 
   ],
@@ -71,6 +74,14 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     provideFirestore(() => getFirestore()),
     HotToastModule.forRoot(),
     MatMenuModule,
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

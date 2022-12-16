@@ -3,6 +3,7 @@
 	
 	<button mat-button routerLinkActive="active" [routerLink]="['/' + 'country']">Country</button>
 	<button mat-button routerLinkActive="active" [routerLink]="'/' + 'weather'">Weather</button>
+	<button mat-button routerLinkActive="active" [routerLink]="'/' + 'map'">Map</button>
 
 	<ng-container *ngIf="authService.currentUser$ | async as user;else loginButton">
 		<button mat-button [matMenuTriggerFor]="userMenu">
