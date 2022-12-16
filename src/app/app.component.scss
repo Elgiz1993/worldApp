@@ -1,7 +1,8 @@
 mat-toolbar{
 	justify-content: space-between;
+	top: 0;
 
-	.navigation{
+	&.navigation{
 		position: fixed;
 		z-index: 2;
 	}

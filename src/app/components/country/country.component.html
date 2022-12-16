@@ -10,6 +10,8 @@
 	></app-dropdown>
 </div>
 
+<p class="loading" *ngIf="loading">Loading...</p>
+
 <div class="country">
 	<app-country-card *ngFor="let country of countriesFilter" [country]="country" class="country_center" ></app-country-card>
 </div>

@@ -11,11 +11,14 @@ import worldmap from "src/assets/worldmap.json"
 export class MapComponent implements OnInit {
 
   mapOption: EChartsOption = {}
+  loading: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
+    this.loading = true
     this.mapFunction()
+    this.loading = false
   }
 
   mapFunction(){

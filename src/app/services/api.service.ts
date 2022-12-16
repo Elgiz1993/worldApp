@@ -10,9 +10,7 @@ export class ApiService {
 
   private api = 'https://restcountries.com/v2'
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor( private http: HttpClient  ) { }
 
     getAllCountries():Observable<ICountry[]>{
       return this.http.get<ICountry[]>(`${this.api}/all`)

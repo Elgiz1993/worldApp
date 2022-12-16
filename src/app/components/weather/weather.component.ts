@@ -17,6 +17,8 @@ export class WeatherComponent implements OnInit {
   imgHot!: string
   imgCold!: string
 
+  loading: boolean = false
+
   constructor(
     private api: WeatherService
   ){
@@ -25,8 +27,10 @@ export class WeatherComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loading = true
     this.getWeatherData(this.cityName)
-    this.cityName = ''
+    this.cityName = '';
+    this.loading = false
   }
 
   onSubmit(){

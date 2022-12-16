@@ -34,6 +34,7 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { UrlPipePipe } from './pipe/url-pipe.pipe';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { MapComponent } from './components/map/map.component';
+// import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
 
 
 
@@ -54,6 +55,7 @@ import { MapComponent } from './components/map/map.component';
     UrlPipePipe,
     ErrorPageComponent,
     MapComponent,
+    // WeatherWidgetComponent,
 
 
   ],

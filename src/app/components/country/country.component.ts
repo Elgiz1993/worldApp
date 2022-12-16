@@ -16,16 +16,19 @@ export class CountryComponent implements OnInit {
   searchFilter?: string
   regionFilter?: string
   regionOptions = REGION_OPTIONS;
-
+  loading: boolean = false
 
   constructor(
     private api: ApiService
   ) { }
 
   ngOnInit(): void {
+    this.loading = true
     this.api.getAllCountries().subscribe(countries => {
       this.source = countries;
+      this.loading = false
     })
+    
   }
 
   get countriesFilter(){
