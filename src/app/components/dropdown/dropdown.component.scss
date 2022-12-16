@@ -27,16 +27,3 @@
 	}
 }
 
-:host-context(.light){
-	.dropdown,
-	.dropdown-options{
-		background-color: var(--l-element);
-	}
-}
-
-:host-context(.dark){
-	.dropdown,
-	.dropdown-options{
-		background-color: var(--d-element);
-	}
-}

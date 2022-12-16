@@ -25,9 +25,9 @@ const routes: Routes = [
   {path: 'weather', component: WeatherComponent, ...canActivate(redirectToLogin)},
   {path: 'home', component: HomeComponent, ...canActivate(redirectToLogin)},
   {path: 'map', component: MapComponent, ...canActivate(redirectToLogin)},
+  {path: 'error', component: ErrorPageComponent},
   {path: 'country', component: CountryComponent, ...canActivate(redirectToLogin),},
   {path: ':detail', component: DetailComponent, ...canActivate(redirectToLogin)},
-  {path: 'error', component: ErrorPageComponent},
   {path: '**', redirectTo: '/error'}
 ];
 
